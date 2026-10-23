@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#fff0f3" />
+<title>For Sahiba 💗</title>
+<style>
+  :root {
+    --pink: #ff6f91;
+    --deep: #b8325a;
+    --cream: #fffaf2;
+    --ink: #4d3440;
+    --soft: #ffe2e9;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; color: var(--ink); font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fff5f5, #ffe6ed 55%, #fff6e9);
+    min-height: 100vh; overflow-x: hidden;
+  }
+  .topbar {
+    position: sticky; top: 0; z-index: 10; display:flex; justify-content:space-between;
+    align-items:center; gap:12px; padding: 15px clamp(16px, 5vw, 64px);
+    background: rgba(255,250,246,.88); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,111,145,.18);
+  }
+  .brand { font-size: clamp(1.1rem, 3vw, 1.5rem); font-weight: 800; color: #63374b; }
+  .brand span { color: var(--pink); }
+  .nav-love { color: var(--deep); font-weight: 700; white-space: nowrap; }
+  .hero {
+    width: min(1120px, 92%); margin: 32px auto 50px; display:grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(20px, 4vw, 48px);
+    align-items:center;
+  }
+  .visual {
+    min-height: 550px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    position:relative; border-radius: 32px; overflow:hidden; padding: 28px 18px;
+    background: radial-gradient(circle at 50% 35%, #fff8d9 0 9%, transparent 32%),
+                linear-gradient(160deg, #f9c9bc, #f7d8d5 52%, #d9a8a4);
+    box-shadow: 0 22px 55px rgba(143,64,86,.15);
+  }
+  .visual::before, .visual::after {
+    content:""; position:absolute; border-radius:50%; background:rgba(255,255,255,.22);
+    width:220px;height:220px; filter:blur(2px);
+  }
+  .visual::before { left:-80px; bottom:25px; }
+  .visual::after { right:-80px; top:35px; }
+  .speech {
+    z-index:1; align-self:flex-start; margin: 0 0 10px 5%; background:#fffaf5;
+    border:2px solid #fff; border-radius: 22px 22px 22px 5px; padding:12px 17px;
+    font-size:1rem; font-weight:700; transform:rotate(-3deg); box-shadow:0 8px 18px #9c58601b;
+  }
+  .baby-wrap { z-index:1; width: min(320px, 88%); text-align:center; animation: bob 3s ease-in-out infinite; }
+  .baby {
+    width: 190px; height: 205px; margin: 0 auto -4px; position:relative;
+  }
+  .hair {
+    position:absolute; width:132px;height:70px;left:29px;top:8px;background:#53382f;
+    border-radius:65% 55% 35% 25%; transform:rotate(-5deg); z-index:2;
+  }
+  .hair::before { content:""; position:absolute; width:48px;height:36px;left:6px;top:-8px;
+    background:#53382f;border-radius:50%; box-shadow:28px -7px 0 -2px #53382f, 59px 0 0 -5px #53382f, 83px 11px 0 -7px #53382f; }
+  .face {
+    position:absolute; left:30px; top:28px; width:132px;height:145px;
+    background:linear-gradient(145deg,#ffdfc6,#f6bfa3); border-radius:48% 48% 46% 46%;
+    box-shadow:inset -8px -6px 0 #eaa88e35; z-index:1;
+  }
+  .ear { position:absolute; width:24px;height:35px;top:84px;background:#f4b99c;border-radius:50%; }
+  .ear.left {left:20px}.ear.right{right:20px}
+  .eye { position:absolute; top:68px; width:17px;height:22px;background:#382b30;border-radius:50%; }
+  .eye::after { content:""; position:absolute; width:6px;height:7px;left:4px;top:3px;border-radius:50%;background:#fff; }
+  .eye.left{left:32px}.eye.right{right:32px}
+  .cheek { position:absolute; top:94px; width:25px;height:13px;background:#f18d8f80;border-radius:50%; }
+  .cheek.left{left:13px}.cheek.right{right:13px}
+  .nose { position:absolute;left:62px;top:91px;width:8px;height:6px;border-radius:50%;background:#dc947e; }
+  .smile { position:absolute;left:50px;top:99px;width:32px;height:18px;border-bottom:4px solid #a94e55;border-radius:0 0 50% 50%; }
+  .body-baby {
+    position:absolute; left:20px;top:148px;width:152px;height:83px;background:#fff1ef;
+    border-radius:55px 55px 28px 28px;border:3px solid #f6d6d3;
+  }
+  .arm { position:absolute; z-index:3; top:161px;width:33px;height:64px;background:#f7c5a9;border-radius:24px; }
+  .arm.left{left:7px;transform:rotate(20deg)}.arm.right{right:7px;transform:rotate(-20deg)}
+  .sign {
+    position:relative; z-index:4; background:#fffaf3; padding:17px 18px 15px;
+    border-radius:8px; transform:rotate(-2deg); box-shadow:0 12px 20px #6b384025;
+    border:1px solid #f1d7d0; color:#6d3e56; font-size:1.25rem; line-height:1.35; font-weight:800;
+  }
+  .sign small { display:block; font-size:.86rem; color:var(--pink); margin-top:6px; }
+  .visual-caption { z-index:1; margin-top:20px; color:#fffaf6; text-shadow:0 2px 8px #713f46a0; font-weight:700; text-align:center; }
+  .letter {
+    background:rgba(255,252,246,.94); border:1px solid #fff; border-radius:25px;
+    padding: clamp(22px, 4vw, 42px); box-shadow:0 22px 55px rgba(143,64,86,.12);
+    position:relative;
+  }
+  .letter::after { content:"♡"; position:absolute; right:22px; top:12px; color:#ff9aad;font-size:2rem; }
+  h1 { font-family: Georgia, serif; font-size:clamp(2rem, 4vw, 3rem); margin:0 0 8px; color:#9f3c60; }
+  .subtitle { color:#a16b7e; margin:0 0 23px; font-size:.98rem; }
+  .message p { line-height:1.72; margin:0 0 16px; font-size:1rem; }
+  .message strong { color:#9f3c60; }
+  .signature { text-align:right; font-family:Georgia,serif; font-size:1.25rem; color:#9f3c60; margin-top:25px; }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:25px; }
+  button {
+    border:0; border-radius:999px; padding:13px 19px; font-size:1rem; font-weight:800;
+    cursor:pointer; transition:transform .2s, box-shadow .2s; font-family:inherit;
+  }
+  button:hover { transform:translateY(-2px); box-shadow:0 8px 18px #a6426525; }
+  .primary { color:white; background:linear-gradient(135deg,#ff7898,#e74d7a); }
+  .secondary { background:#ffe6ed; color:#9f3c60; }
+  .response { display:none; margin-top:18px; padding:16px; border-radius:16px; background:#fff0f4; line-height:1.6; }
+  .response.show { display:block; animation:fade .4s ease; }
+  footer { text-align:center; padding:0 20px 32px; color:#9b7180; font-size:.92rem; }
+  .floating-heart {
+    position:fixed; bottom:-35px; pointer-events:none; z-index:20; animation:floatUp linear forwards;
+    opacity:.8; color:#ff6f91;
+  }
+  .confetti { position:fixed; z-index:30; pointer-events:none; animation:burst 1.7s ease-out forwards; }
+  @keyframes bob { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-9px) rotate(1deg)} }
+  @keyframes floatUp { to { transform:translateY(-110vh) rotate(35deg); opacity:0; } }
+  @keyframes fade { from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)} }
+  @keyframes burst { to { transform:translate(var(--dx),var(--dy)) rotate(360deg); opacity:0; } }
+  @media (max-width: 800px) {
+    .hero { grid-template-columns:1fr; width:min(620px,92%); margin-top:20px; }
+    .visual { min-height:480px; }
+    .topbar { padding:13px 16px; }
+    .nav-love { font-size:.9rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span>♡</span> For Sahiba</div>
+  <div class="nav-love">A little apology ♡</div>
+</header>
+
+<main class="hero">
+  <section class="visual" aria-label="Cute baby boy asking for forgiveness">
+    <div class="speech">You mean the world to me ♡</div>
+    <div class="baby-wrap">
+      <div class="baby" aria-hidden="true">
+        <div class="ear left"></div><div class="ear right"></div>
+        <div class="hair"></div>
+        <div class="face">
+          <div class="eye left"></div><div class="eye right"></div>
+          <div class="cheek left"></div><div class="cheek right"></div>
+          <div class="nose"></div><div class="smile"></div>
+        </div>
+        <div class="body-baby"></div><div class="arm left"></div><div class="arm right"></div>
+      </div>
+      <div class="sign">Sahiba…<br>please forgive me 🥺<small>I'm truly sorry ♡</small></div>
+    </div>
+    <div class="visual-caption">One mistake, a sincere apology ♡</div>
+  </section>
+
+  <article class="letter">
+    <h1>Sahiba, ♡</h1>
+    <p class="subtitle">A little message from your boy, with all my heart.</p>
+    <div class="message">
+      <p>Mujhe pata hai ki meri ek baat ne aapko hurt kiya hai aur aapke mind mein ye doubt daal diya hai ki shayad main aapko aapke appearance ya kapdon ki wajah se reject kar doon. ❤️</p>
+
+      <p>Lekin Sahiba, please meri baat samajhne ki koshish karna. Jab maine kaha tha ki <strong>“main khud hi aapko bhaga dunga”</strong>, woh meri galti thi. Mujhe aisa nahi bolna chahiye tha, chahe maine us waqt mazaak mein hi kyun na kaha ho. Main samajh sakta hoon ki meri baat sunkar aapko kitna bura laga hoga.</p>
+
+      <p>Main aapko kisi particular dress, colour ya appearance ki wajah se pasand nahi karta. Aapki personality, aapka nature, aapki smile aur aapka mere saath hona mere liye bahut matter karta hai. ❤️</p>
+
+      <p>Aap jo pehenna chahti hain, jis outfit mein khud ko beautiful aur confident feel karti hain, main nahi chahta ki aap mere darr se apni choice badlein. Main kabhi nahi chahta ki aapko mere pyaar mein apni appearance ko lekar insecurity feel ho.</p>
+
+      <p>Main jaanta hoon ki sirf sorry bolne se aapka doubt turant khatam nahi hoga. Main aapse ye expect bhi nahi karta ki aap ekdum se sab bhool jaayein. Bas main chahta hoon ki aap mujhe waqt ke saath apni baaton aur actions se ye prove karne ka mauka dein ki meri woh baat meri soch nahi thi.</p>
+
+      <p>I'm genuinely sorry, Sahiba. Aap mere liye bahut important hain. Main nahi chahta ki meri ek galat baat ki wajah se aap kabhi mere saamne khud ko lekar uncomfortable feel karein. Main aapko samajhna chahta hoon, aapki feelings ko samajhna chahta hoon, aur aapko ye feel karwana chahta hoon ki aap mere saath apni real self ban kar reh sakti hain. 🫶🏻❤️</p>
+
+      <p>Aapko abhi time chahiye toh le lijiye. Main aapko force nahi karunga. Bas itna chahta hoon ki aap meri us ek galat baat ko meri poori feelings ka proof mat samajhna. ❤️</p>
+    </div>
+    <div class="signature">Sincerely,<br>Your boy ♡</div>
+    <div class="actions">
+      <button class="primary" id="forgiveBtn">A tiny hug for you? 🥺</button>
+      <button class="secondary" id="heartBtn">Send you love 💌</button>
+    </div>
+    <div class="response" id="response" aria-live="polite"></div>
+  </article>
+</main>
+
+<footer>Made with care, just for Sahiba ♡ <br>Take all the time you need. No pressure.</footer>
+
+<script>
+  const response = document.getElementById('response');
+  document.getElementById('forgiveBtn').addEventListener('click', () => {
+    response.innerHTML = '🫂 <strong>A big, warm virtual hug for you, Sahiba.</strong><br>You don’t have to reply or forgive me right away. I just hope you feel loved, respected, and safe being yourself. ❤️';
+    response.classList.add('show');
+    heartShower(18);
+  });
+  document.getElementById('heartBtn').addEventListener('click', () => {
+    response.innerHTML = '💌 <strong>Sending you all my love.</strong><br>Your smile matters to me, your feelings matter to me, and so does your choice. ♡';
+    response.classList.add('show');
+    heartShower(28);
+  });
+  function heartShower(count) {
+    const symbols = ['♥','♡','💗','💕','✨'];
+    for (let i=0; i<count; i++) {
+      const heart = document.createElement('span');
+      heart.className = 'floating-heart';
+      heart.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      heart.style.left = (Math.random()*100) + 'vw';
+      heart.style.fontSize = (16 + Math.random()*22) + 'px';
+      heart.style.animationDuration = (3 + Math.random()*3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6500);
+    }
+  }
+  // A few gentle hearts in the background
+  setInterval(() => {
+    if (document.hidden) return;
+    const heart = document.createElement('span');
+    heart.className = 'floating-heart';
+    heart.textContent = Math.random() > .5 ? '♡' : '♥';
+    heart.style.left = (Math.random()*100) + 'vw';
+    heart.style.fontSize = (13 + Math.random()*13) + 'px';
+    heart.style.animationDuration = (6 + Math.random()*4) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 10500);
+  }, 1200);
+</script>
+</body>
+</html>
